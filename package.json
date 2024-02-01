@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "anyit-auth",
+  "license": "MIT",
+  "author": "Anton Nagornyi",
+  "homepage": "https://github.com/anton-nagornyi/anyit-auth/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anton-nagornyi/anyit-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anton-nagornyi/anyit-auth/issues"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**/*"
+    ]
+  },
+  "dependencies": {
+    "@anyit/be-dev": "^1.0.53"
+  },
+  "packageManager": "yarn@4.0.2"
+}
