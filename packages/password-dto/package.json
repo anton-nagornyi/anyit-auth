@@ -1,5 +1,6 @@
 {
   "version": "1.0.0",
+  "name": "@anyit/password-dto",
   "license": "MIT",
   "author": "Anton Nagornyi",
   "homepage": "https://github.com/anton-nagornyi/anyit-auth/blob/main/packages/password-dto/README.md",
