@@ -22,6 +22,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anyit/actor@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "@anyit/actor@npm:1.0.11"
+  peerDependencies:
+    "@anyit/message-handling": "*"
+    "@anyit/messaging": "*"
+    reflect-metadata: "*"
+  checksum: a589a8de7afac0ad995beda118f7ca2d988a147ece0ea5168e314b4f4e61fc8529cb444a1bc1bedeb60d445b18de765df465a23ca1a8e07e1f78c11452210b26
+  languageName: node
+  linkType: hard
+
 "@anyit/be-dev@npm:^1.0.53":
   version: 1.0.53
   resolution: "@anyit/be-dev@npm:1.0.53"
@@ -69,6 +80,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anyit/message-handling@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@anyit/message-handling@npm:1.0.3"
+  peerDependencies:
+    "@anyit/messaging": "*"
+    reflect-metadata: "*"
+  checksum: 7263312f5d128a15e4535fbb703b986d3c4ccdcd4169d05622c8609de58cb81bef32608ab40157db113f7dcba5db3c608282f4a54d03baecb81c00d9fbe92f32
+  languageName: node
+  linkType: hard
+
 "@anyit/messaging@npm:^1.0.3":
   version: 1.0.3
   resolution: "@anyit/messaging@npm:1.0.3"
@@ -89,6 +110,37 @@ __metadata:
     luxon: "npm:^3.4.4"
   peerDependencies:
     "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
+
+"@anyit/store-dto@workspace:^, @anyit/store-dto@workspace:packages/store-dto":
+  version: 0.0.0-use.local
+  resolution: "@anyit/store-dto@workspace:packages/store-dto"
+  dependencies:
+    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/messaging": "npm:^1.0.3"
+    jest: "npm:^29.7.0"
+  peerDependencies:
+    "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
+
+"@anyit/store-in-memory-actor@workspace:packages/store-in-memory-actor":
+  version: 0.0.0-use.local
+  resolution: "@anyit/store-in-memory-actor@workspace:packages/store-in-memory-actor"
+  dependencies:
+    "@anyit/actor": "npm:^1.0.11"
+    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/message-handling": "npm:^1.0.3"
+    "@anyit/messaging": "npm:^1.0.3"
+    "@anyit/store-dto": "workspace:^"
+    jest: "npm:^29.7.0"
+    reflect-metadata: "npm:^0.2.1"
+  peerDependencies:
+    "@anyit/actor": "*"
+    "@anyit/message-handling": "*"
+    "@anyit/messaging": "*"
+    reflect-metadata: "*"
   languageName: unknown
   linkType: soft
 
@@ -5024,6 +5076,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"reflect-metadata@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "reflect-metadata@npm:0.2.1"
+  checksum: 6ca3c674bb43cf8ec3a3f5f38c8730a6116335f8e562fcdcdf3a492af168c5a7f0e8f17476a5710c3fe6bf9b5d22e8a463f14c0e26e326339cab65e099900ef7
+  languageName: node
+  linkType: hard
+
 "regexp.prototype.flags@npm:^1.5.1":
   version: 1.5.1
   resolution: "regexp.prototype.flags@npm:1.5.1"
@@ -5523,18 +5582,6 @@ __metadata:
   checksum: 651c9f87667e077584bbe848acaecc6049bc71979f1e9a46c7b920cad4431c388df0f51b8ad7cfd6eed3db97a2878d0fc8b3122979439ea8bac29c61c95eec8a
   languageName: node
   linkType: hard
-
-"store-dto-1bd481@workspace:packages/store-dto":
-  version: 0.0.0-use.local
-  resolution: "store-dto-1bd481@workspace:packages/store-dto"
-  dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
-    "@anyit/messaging": "npm:^1.0.3"
-    jest: "npm:^29.7.0"
-  peerDependencies:
-    "@anyit/messaging": "*"
-  languageName: unknown
-  linkType: soft
 
 "string-length@npm:^4.0.1":
   version: 4.0.2
