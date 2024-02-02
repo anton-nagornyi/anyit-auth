@@ -78,6 +78,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anyit/password-dto@workspace:packages/password-dto":
+  version: 0.0.0-use.local
+  resolution: "@anyit/password-dto@workspace:packages/password-dto"
+  dependencies:
+    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/messaging": "npm:^1.0.3"
+    "@types/luxon": "npm:^3"
+    jest: "npm:^29.7.0"
+    luxon: "npm:^3.4.4"
+  peerDependencies:
+    "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.22.13, @babel/code-frame@npm:^7.23.5":
   version: 7.23.5
   resolution: "@babel/code-frame@npm:7.23.5"
@@ -4781,20 +4795,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"password-dto-6609d4@workspace:packages/password-dto":
-  version: 0.0.0-use.local
-  resolution: "password-dto-6609d4@workspace:packages/password-dto"
-  dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
-    "@anyit/messaging": "npm:^1.0.3"
-    "@types/luxon": "npm:^3"
-    jest: "npm:^29.7.0"
-    luxon: "npm:^3.4.4"
-  peerDependencies:
-    "@anyit/messaging": "*"
-  languageName: unknown
-  linkType: soft
-
 "path-exists@npm:^3.0.0":
   version: 3.0.0
   resolution: "path-exists@npm:3.0.0"
@@ -5523,6 +5523,18 @@ __metadata:
   checksum: 651c9f87667e077584bbe848acaecc6049bc71979f1e9a46c7b920cad4431c388df0f51b8ad7cfd6eed3db97a2878d0fc8b3122979439ea8bac29c61c95eec8a
   languageName: node
   linkType: hard
+
+"store-dto-1bd481@workspace:packages/store-dto":
+  version: 0.0.0-use.local
+  resolution: "store-dto-1bd481@workspace:packages/store-dto"
+  dependencies:
+    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/messaging": "npm:^1.0.3"
+    jest: "npm:^29.7.0"
+  peerDependencies:
+    "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
 
 "string-length@npm:^4.0.1":
   version: 4.0.2
