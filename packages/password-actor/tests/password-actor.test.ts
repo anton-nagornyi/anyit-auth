@@ -554,7 +554,10 @@ describe('Given PasswordActor', () => {
 
     describe('And a non-existing user ID is provided', () => {
       beforeEach(() => {
-        (store.ask as jest.Mock).mockResolvedValueOnce({ reason: {} });
+        (store.ask as jest.Mock).mockResolvedValueOnce({
+          reason: {},
+          response: {},
+        });
       });
 
       it('Then it should throw a MissingPasswordError', async () => {
