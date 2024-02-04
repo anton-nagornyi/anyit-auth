@@ -6310,6 +6310,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"username-dto-3e9b35@workspace:packages/username-dto":
+  version: 0.0.0-use.local
+  resolution: "username-dto-3e9b35@workspace:packages/username-dto"
+  dependencies:
+    "@anyit/auth-actor-dto": "workspace:^"
+    "@anyit/be-dev": "npm:^1.0.54"
+    jest: "npm:^29.7.0"
+  languageName: unknown
+  linkType: soft
+
 "util-deprecate@npm:^1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"

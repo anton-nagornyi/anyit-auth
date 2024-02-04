@@ -1,0 +1,3 @@
+export const USERNAME_ACTOR = 'username-actor-01HFM6P08PSEXGCFPVSCVGMV2R';
+export const USERNAME_STORE_ACTOR =
+  'username-store-actor-01HEMEN00A365DV7CDN8RP65Z3';
