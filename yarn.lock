@@ -33,11 +33,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@anyit/auth-actor-dto@workspace:packages/auth-actor-dto":
+"@anyit/auth-actor-dto@workspace:^, @anyit/auth-actor-dto@workspace:packages/auth-actor-dto":
   version: 0.0.0-use.local
   resolution: "@anyit/auth-actor-dto@workspace:packages/auth-actor-dto"
   dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/be-dev": "npm:^1.0.54"
     "@anyit/messaging": "npm:^1.0.3"
     jest: "npm:^29.7.0"
   peerDependencies:
@@ -45,9 +45,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@anyit/be-dev@npm:^1.0.53":
-  version: 1.0.53
-  resolution: "@anyit/be-dev@npm:1.0.53"
+"@anyit/be-dev@npm:^1.0.54":
+  version: 1.0.54
+  resolution: "@anyit/be-dev@npm:1.0.54"
   dependencies:
     "@rollup/plugin-typescript": "npm:^11.1.5"
     "@types/node": "npm:^20.10.5"
@@ -88,7 +88,7 @@ __metadata:
     rollup: ./bin/proxy-rollup.js
     test: ./bin/test.js
     "version:bump": ./bin/version-bump.js
-  checksum: 15c76e3d0349abd737818783fb56492c529bcea320abbf37bea970fb6c3a7d8afe43bdc1114c57d409b21a22c78d85851d5aa91b818504553600770cc887de08
+  checksum: a3420b8cbdd802afd4365dd0ab3d75413b7884bab62c71cdf40d241740affd85a7f9f03c77334a0d16f78837a9172ac846fa3831f0b71ba1779f85e94e586da0
   languageName: node
   linkType: hard
 
@@ -125,7 +125,8 @@ __metadata:
   resolution: "@anyit/password-actor@workspace:packages/password-actor"
   dependencies:
     "@anyit/actor": "npm:^1.0.11"
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/auth-actor-dto": "workspace:^"
+    "@anyit/be-dev": "npm:^1.0.54"
     "@anyit/message-handling": "npm:^1.0.3"
     "@anyit/messaging": "npm:^1.0.3"
     "@anyit/messenger-dto": "npm:^1.0.2"
@@ -135,10 +136,12 @@ __metadata:
     argon2: "npm:^0.31.2"
     jest: "npm:^29.7.0"
     luxon: "npm:^3.4.4"
+    reflect-metadata: "npm:^0.2.1"
   peerDependencies:
     "@anyit/actor": "*"
     "@anyit/message-handling": "*"
     "@anyit/messaging": "*"
+    reflect-metadata: "*"
   languageName: unknown
   linkType: soft
 
@@ -146,7 +149,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anyit/password-dto@workspace:packages/password-dto"
   dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/be-dev": "npm:^1.0.54"
     "@anyit/messaging": "npm:^1.0.3"
     "@types/luxon": "npm:^3"
     jest: "npm:^29.7.0"
@@ -160,7 +163,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anyit/store-dto@workspace:packages/store-dto"
   dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/be-dev": "npm:^1.0.54"
     "@anyit/messaging": "npm:^1.0.3"
     jest: "npm:^29.7.0"
   peerDependencies:
@@ -173,7 +176,7 @@ __metadata:
   resolution: "@anyit/store-in-memory-actor@workspace:packages/store-in-memory-actor"
   dependencies:
     "@anyit/actor": "npm:^1.0.11"
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/be-dev": "npm:^1.0.54"
     "@anyit/message-handling": "npm:^1.0.3"
     "@anyit/messaging": "npm:^1.0.3"
     "@anyit/store-dto": "workspace:^"
@@ -1683,7 +1686,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "anyit-auth@workspace:."
   dependencies:
-    "@anyit/be-dev": "npm:^1.0.53"
+    "@anyit/be-dev": "npm:^1.0.54"
   languageName: unknown
   linkType: soft
 

@@ -5,6 +5,7 @@
 export * from './src/addresses';
 export * from './src/password';
 export * from './src/errors/invalid-password-error';
+export * from './src/errors/invalid-password-hash-error';
 export * from './src/errors/missing-password-error';
 export * from './src/errors/reset-token-expired-error';
 export * from './src/errors/wrong-password-error';

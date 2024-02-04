@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@anyit/password-dto",
   "license": "MIT",
   "author": "Anton Nagornyi",
@@ -18,7 +18,7 @@
   ],
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@anyit/be-dev": "^1.0.53",
+    "@anyit/be-dev": "^1.0.54",
     "@anyit/messaging": "^1.0.3",
     "@types/luxon": "^3",
     "jest": "^29.7.0"
