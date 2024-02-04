@@ -1,0 +1,3 @@
+export const IDENTITY_ACTOR = 'identity-actor-01HEMBJ5SGYXC0N556PRH3GYFC';
+export const IDENTITY_STORE_ACTOR =
+  'identity-store-actor-01HEMEN00A365DV7CDN8RP65Z3';
