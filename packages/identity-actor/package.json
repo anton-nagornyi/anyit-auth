@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "name": "@anyit/identity-actor",
+  "license": "MIT",
+  "author": "Anton Nagornyi",
+  "homepage": "https://github.com/anton-nagornyi/anyit-auth/blob/main/packages/identity-actor/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anton-nagornyi/anyit-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anton-nagornyi/anyit-auth/issues"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist/*.d.ts",
+    "dist/*.js"
+  ],
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@anyit/actor": "^1.0.11",
+    "@anyit/be-dev": "^1.0.54",
+    "@anyit/message-handling": "^1.0.3",
+    "@anyit/messaging": "^1.0.3",
+    "@types/luxon": "^3",
+    "jest": "^29.7.0",
+    "reflect-metadata": "^0.2.1"
+  },
+  "peerDependencies": {
+    "@anyit/actor": "*",
+    "@anyit/message-handling": "*",
+    "@anyit/messaging": "*",
+    "reflect-metadata": "*"
+  },
+  "dependencies": {
+    "@anyit/auth-actor-dto": "workspace:^",
+    "@anyit/identity-dto": "workspace:^",
+    "@anyit/store-dto": "workspace:^",
+    "luxon": "^3.4.4"
+  }
+}
