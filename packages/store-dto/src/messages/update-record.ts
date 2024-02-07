@@ -7,9 +7,12 @@ export class UpdateRecord<T = Record<string, any>> extends Message {
   constructor(args: UpdateRecordArgs<T>) {
     super(args);
     this.record = { ...(args.record as T) };
+    this.filter = { ...(args.filter as T) };
   }
 
   readonly record: Partial<T>;
+
+  readonly filter: Partial<T>;
 }
 
 export const isUpdateRecord = (message?: Message): message is UpdateRecord =>

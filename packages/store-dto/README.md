@@ -23,7 +23,7 @@ The library offers several classes for handling different store operations:
 
 ### DeleteRecord
 
-`DeleteRecord` is used to delete a record based on a filter.
+`DeleteRecord` is used to delete a record or records based on a filter.
 
 
 ### GetNextIdIncremented
@@ -40,7 +40,7 @@ The library offers several classes for handling different store operations:
 
 ### UpdateRecord
 
-`UpdateRecord` is used to update a record based on provided data.
+`UpdateRecord` is used to update a record or records based on a filter.
 
 ## API Reference
 
