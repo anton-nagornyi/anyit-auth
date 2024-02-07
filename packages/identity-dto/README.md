@@ -38,20 +38,13 @@ Use the `IDENTITY_ACTOR` and `IDENTITY_STORE_ACTOR` for actor lookups within the
 import { IDENTITY_ACTOR, IDENTITY_STORE_ACTOR } from '@anyit/identity-dto';
 ```
 
-### Error Handling
-
-Utilize the `WrongArgumentValue` class for managing errors related to incorrect argument values:
-
-```typescript
-throw new WrongArgumentValue('argumentName');
-```
-
 ### Operations
 
 - **LockIdentity**: Locks an identity record for a specified duration.
 - **SeeIdentity**: Updates the `lastSeenAt` timestamp and IP address for an identity.
 - **SetActiveIdentity**: Sets the active status of an identity record.
 - **UnlockIdentity**: Unlocks a previously locked identity record.
+- **UnlockIdentitiesPeriodically**: Unlocks a previously locked identities records if lockOutEndsAt is less than now.
 
 ## Contributing
 
