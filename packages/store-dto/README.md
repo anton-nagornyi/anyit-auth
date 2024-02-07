@@ -59,6 +59,24 @@ The library offers several classes for handling different store operations:
     - `isGetRecords`
     - `isUpdateRecord`
 
+## Operators
+
+- **IsNull**: Checks if a field is null.
+- **LessThan**, **LessThanOrEqual**: Compare for less-than conditions.
+- **MoreThan**, **MoreThanOrEqual**: Compare for more-than conditions.
+- **Not**: Negates a condition.
+
+### Example: Using Operators
+
+To query records with a field value less than a certain amount:
+
+```typescript
+const query = new GetRecords({
+  filter: { amount: new LessThan(100) }
+});
+```
+
+
 ## Contributing
 
 Contributions are welcome. Please submit a pull request or open an issue on the GitHub repository.
