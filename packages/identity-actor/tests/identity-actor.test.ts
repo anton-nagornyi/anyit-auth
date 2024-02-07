@@ -598,9 +598,6 @@ describe('Given IdentityActor', () => {
   });
 
   describe('When unlockIdentitiesPeriodically', () => {
-    const traceId = 'unique-trace-id';
-    const id = 123;
-
     describe('And unlocking an identities', () => {
       beforeEach(() => {
         store.ask = jest.fn().mockResolvedValue({ error: null, response: {} });
