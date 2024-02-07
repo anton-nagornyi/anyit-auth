@@ -92,7 +92,7 @@ describe('StoreInMemoryActor', () => {
 
       it('Then it should update the record correctly', async () => {
         await actor.ask(
-          new UpdateRecord({ record: { id: 1, name: 'Updated' } }),
+          new UpdateRecord({ record: { name: 'Updated' }, filter: { id: 1 } }),
         );
 
         const { reason: data } = await actor.ask(

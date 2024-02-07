@@ -38,11 +38,9 @@ export class StoreInMemoryActor extends Actor {
         if (value instanceof Operator) {
           if (!applyOperator(storedItem[field], value)) {
             isSatisfyingItem = false;
-            break;
           }
         } else if (storedItem[field] !== value) {
           isSatisfyingItem = false;
-          break;
         }
       }
 
@@ -125,8 +123,25 @@ export class StoreInMemoryActor extends Actor {
     message.records = result;
   }
 
-  update(@Receive { record }: UpdateRecord) {
-    const currentRecord = this.store.get(record.id) ?? {};
-    this.store.set(record.id, mergeDeep(currentRecord, record));
+  update(@Receive { record, filter }: UpdateRecord) {
+    const filterEntries = Object.entries(filter);
+
+    for (const storedItem of this.store.values()) {
+      let isSatisfyingItem = true;
+      for (const [field, value] of filterEntries) {
+        if (value instanceof Operator) {
+          if (!applyOperator(storedItem[field], value)) {
+            isSatisfyingItem = false;
+          }
+        } else if (storedItem[field] !== value) {
+          isSatisfyingItem = false;
+        }
+      }
+
+      if (isSatisfyingItem) {
+        this.store.delete(storedItem.id);
+        this.store.set(record.id, mergeDeep(storedItem, record));
+      }
+    }
   }
 }
