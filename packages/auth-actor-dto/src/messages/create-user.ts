@@ -11,7 +11,6 @@ export class CreateUser extends Message {
     this.auth = { ...args.auth };
     this.profile = { ...args.profile };
     this.id = args.id ?? 0;
-    this.ipAddress = args.ipAddress;
   }
 
   readonly profile: Record<
@@ -25,8 +24,6 @@ export class CreateUser extends Message {
   >;
 
   id: number;
-
-  readonly ipAddress?: string;
 }
 
 export const isCreateUser = (message?: Message): message is CreateUser =>

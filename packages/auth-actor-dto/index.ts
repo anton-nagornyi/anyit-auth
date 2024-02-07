@@ -7,5 +7,6 @@ export * from './src/messages/authorize-user';
 export * from './src/messages/create-refresh-token';
 export * from './src/messages/create-user';
 export * from './src/messages/delete-user';
+export * from './src/messages/refresh-access-token';
 export * from './src/messages/sign-in-user';
 export * from './src/messages/verify-user-creation';

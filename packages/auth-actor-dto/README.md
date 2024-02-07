@@ -40,6 +40,10 @@ The library offers several classes for handling authentication and authorization
 
 `VerifyUserCreation` is used to verify the creation of a user, extending the `CreateUser` class.
 
+### RefreshAccessToken
+
+`RefreshAccessToken` is used to refresh users access token.
+
 ## API Reference
 
 - **DTO Classes**
@@ -49,6 +53,7 @@ The library offers several classes for handling authentication and authorization
     - `DeleteUser`
     - `SignInUser`
     - `VerifyUserCreation`
+    - `RefreshAccessToken`
 - **Type Guards**
     - `isAuthorizeUser`
     - `isCreateRefreshToken`
@@ -56,6 +61,7 @@ The library offers several classes for handling authentication and authorization
     - `isDeleteUser`
     - `isSignInUser`
     - `isVerifyUserCreation`
+    - `isRefreshAccessToken`
 
 ## Contributing
 
