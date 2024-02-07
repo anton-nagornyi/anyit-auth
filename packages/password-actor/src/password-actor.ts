@@ -199,8 +199,10 @@ export class PasswordActor extends Actor {
     const { error, response } = await this.store.ask(
       new UpdateRecord<Password>({
         record: {
-          id,
           passwordHash: await this.hash(password),
+        },
+        filter: {
+          id,
         },
         sender: this.constructor.name,
       }),
@@ -250,10 +252,12 @@ export class PasswordActor extends Actor {
     const { error: updateError, response } = await this.store.ask(
       new UpdateRecord<Password>({
         record: {
-          id,
           passwordHash: await this.hash(password),
           resetToken: null,
           resetTokenExpiresAt: null,
+        },
+        filter: {
+          id,
         },
         sender: this.constructor.name,
       }),
@@ -313,11 +317,13 @@ export class PasswordActor extends Actor {
     const { error: updateError } = await this.store.ask(
       new UpdateRecord<Password>({
         record: {
-          id,
           resetToken: message.resetToken,
           resetTokenExpiresAt: DateTime.utc()
             .plus({ millisecond: this.resetTokenExpireMs })
             .toISO({ suppressMilliseconds: true }),
+        },
+        filter: {
+          id,
         },
         sender: this.constructor.name,
       }),

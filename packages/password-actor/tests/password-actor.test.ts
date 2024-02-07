@@ -312,7 +312,9 @@ describe('Given PasswordActor', () => {
         expect(hash).toHaveBeenCalledWith('new_password');
         expect(store.ask).toHaveBeenCalledWith(
           expect.objectContaining({
-            record: { id: 1, passwordHash: 'hashed_new_password' },
+            code: UpdateRecord.code,
+            record: { passwordHash: 'hashed_new_password' },
+            filter: { id: 1 },
           }),
         );
       });
@@ -379,12 +381,15 @@ describe('Given PasswordActor', () => {
       beforeEach(() => {
         (store.ask as jest.Mock).mockResolvedValue({
           error: null,
+          code: UpdateRecord.code,
           reason: {
             record: {
-              id: userId,
               resetToken: validResetToken,
               resetTokenExpiresAt: DateTime.utc().plus({ days: 1 }),
             },
+          },
+          filter: {
+            id: userId,
           },
         });
 
@@ -400,15 +405,15 @@ describe('Given PasswordActor', () => {
           }),
         );
 
-        // Verify the new password is hashed
         expect(hash).toHaveBeenCalledWith(newPassword);
-        // Verify the store is called to update the user's password
         expect(store.ask).toHaveBeenCalledWith(
           expect.objectContaining({
             record: expect.objectContaining({
-              id: userId,
               passwordHash: hashedPassword,
             }),
+            filter: {
+              id: userId,
+            },
           }),
         );
       });
@@ -512,7 +517,7 @@ describe('Given PasswordActor', () => {
       const resetToken = 'resetToken123';
       beforeEach(() => {
         (store.ask as jest.Mock).mockResolvedValue({
-          reason: { record: { id: userID } },
+          reason: { record: {}, filter: { id: userID } },
           response: {},
         });
 
@@ -525,12 +530,12 @@ describe('Given PasswordActor', () => {
         expect(store.ask).toHaveBeenCalledWith(
           expect.objectContaining({
             record: expect.objectContaining({
-              id: userID,
               resetToken,
               resetTokenExpiresAt: DateTime.utc()
                 .plus({ millisecond: 2000 })
                 .toISO(),
             }),
+            filter: { id: userID },
             code: UpdateRecord.code,
           }),
         );
