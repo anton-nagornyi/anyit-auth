@@ -1,6 +1,5 @@
 import { Actor, ActorArgs } from '@anyit/actor';
 import { Receive } from '@anyit/message-handling';
-import { SuccessMessage, ErrorMessage } from '@anyit/messaging';
 import { CreateToken, VerifyToken } from '@anyit/token-dto';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
 
