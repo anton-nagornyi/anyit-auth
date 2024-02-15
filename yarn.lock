@@ -6129,6 +6129,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"token-dto-554a8d@workspace:packages/token-dto":
+  version: 0.0.0-use.local
+  resolution: "token-dto-554a8d@workspace:packages/token-dto"
+  dependencies:
+    "@anyit/be-dev": "npm:^1.0.54"
+    "@anyit/messaging": "npm:^1.0.3"
+    jest: "npm:^29.7.0"
+  peerDependencies:
+    "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
+
 "tr46@npm:~0.0.3":
   version: 0.0.3
   resolution: "tr46@npm:0.0.3"
