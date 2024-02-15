@@ -1,0 +1,3 @@
+export const PROFILE_ACTOR = 'profile-actor-01HFHD9NJ4FW6238TPBHFHFR8H';
+export const PROFILE_STORE_ACTOR =
+  'profile-store-actor-01HFHTFMWX10WQ4NRVRGHGMZ4H';
