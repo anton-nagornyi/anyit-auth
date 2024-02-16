@@ -251,7 +251,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@anyit/refresh-dto@workspace:packages/refresh-dto":
+"@anyit/refresh-actor@workspace:packages/refresh-actor":
+  version: 0.0.0-use.local
+  resolution: "@anyit/refresh-actor@workspace:packages/refresh-actor"
+  dependencies:
+    "@anyit/actor": "npm:^1.0.11"
+    "@anyit/auth-actor-dto": "workspace:^"
+    "@anyit/be-dev": "npm:^1.0.54"
+    "@anyit/message-handling": "npm:^1.0.3"
+    "@anyit/messaging": "npm:^1.0.3"
+    "@anyit/refresh-dto": "workspace:^"
+    "@anyit/store-dto": "workspace:^"
+    jest: "npm:^29.7.0"
+    reflect-metadata: "npm:^0.2.1"
+  peerDependencies:
+    "@anyit/actor": "*"
+    "@anyit/message-handling": "*"
+    "@anyit/messaging": "*"
+    reflect-metadata: "*"
+  languageName: unknown
+  linkType: soft
+
+"@anyit/refresh-dto@workspace:^, @anyit/refresh-dto@workspace:packages/refresh-dto":
   version: 0.0.0-use.local
   resolution: "@anyit/refresh-dto@workspace:packages/refresh-dto"
   dependencies:
