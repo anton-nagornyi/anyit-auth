@@ -251,6 +251,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@anyit/refresh-dto@workspace:packages/refresh-dto":
+  version: 0.0.0-use.local
+  resolution: "@anyit/refresh-dto@workspace:packages/refresh-dto"
+  dependencies:
+    "@anyit/be-dev": "npm:^1.0.54"
+    "@anyit/messaging": "npm:^1.0.3"
+    jest: "npm:^29.7.0"
+  peerDependencies:
+    "@anyit/messaging": "*"
+  languageName: unknown
+  linkType: soft
+
 "@anyit/store-dto@workspace:^, @anyit/store-dto@workspace:packages/store-dto":
   version: 0.0.0-use.local
   resolution: "@anyit/store-dto@workspace:packages/store-dto"
