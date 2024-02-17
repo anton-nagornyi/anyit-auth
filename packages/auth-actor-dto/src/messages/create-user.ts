@@ -18,7 +18,7 @@ export class CreateUser extends Message {
     string | number | boolean | string[] | number[] | boolean[]
   >;
 
-  readonly auth: { type: string | string[] } & Record<
+  readonly auth: { type: string | string[]; lastIPAddress?: string } & Record<
     string,
     string | number | boolean | string[] | number[] | boolean[]
   >;
