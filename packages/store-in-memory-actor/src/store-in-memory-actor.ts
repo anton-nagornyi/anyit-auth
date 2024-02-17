@@ -7,8 +7,8 @@ import {
   GetRecord,
   Operator,
   UpdateRecord,
+  GetRecords,
 } from '@anyit/store-dto';
-import { GetRecords } from '@anyit/store-dto/src/messages/get-records';
 import { mergeDeep } from './utils';
 import { applyOperator } from './apply-operator';
 
