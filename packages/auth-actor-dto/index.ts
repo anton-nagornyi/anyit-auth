@@ -10,5 +10,6 @@ export * from './src/messages/delete-user';
 export * from './src/messages/refresh-access-token';
 export * from './src/messages/register-authentication-actor';
 export * from './src/messages/register-authorization-actor';
+export * from './src/messages/register-profile-actor';
 export * from './src/messages/sign-in-user';
 export * from './src/messages/verify-user-creation';
