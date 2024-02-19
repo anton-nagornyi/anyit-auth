@@ -139,8 +139,7 @@ export class StoreInMemoryActor extends Actor {
       }
 
       if (isSatisfyingItem) {
-        this.store.delete(storedItem.id);
-        this.store.set(record.id, mergeDeep(storedItem, record));
+        this.store.set(storedItem.id, mergeDeep(storedItem, record));
       }
     }
   }
